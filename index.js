@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const { connectDB } = require('./db');
+const { swaggerUi, swaggerSpec } = require('./swagger');
 
 dotenv.config();
 
@@ -23,6 +24,13 @@ process.on('uncaughtException', (err) => {
 
     app.use(cors());
     app.use(express.json());
+
+    // Swagger documentation
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+    app.get('/api-docs.json', (req, res) => {
+      res.setHeader('Content-Type', 'application/json');
+      res.send(swaggerSpec);
+    });
 
     app.use('/api/customers', require('./routes/customerRoutes'));
     app.use('/api/accounts', require('./routes/accountRoutes'));
