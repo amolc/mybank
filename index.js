@@ -31,11 +31,12 @@ process.on('uncaughtException', (err) => {
     });
 
     app.use('/api/customers', require('./routes/customerRoutes'));
-    app.use('/api/accounts', require('./routes/accountRoutes'));
+    app.use('/api/v1/accounts', require('./routes/accountRoutes'));
     app.use('/api/branches', require('./routes/branchRoutes'));
     app.use('/api/transactions', require('./routes/transactionRoutes'));
     app.use('/api/banks', require('./routes/bankRoutes'));
     app.use('/api/leads', require('./routes/leadRoutes'));
+    app.use('/api/v2/accounts', require('./routes/accountRouteTwo'));
 
     await connectDB();
 

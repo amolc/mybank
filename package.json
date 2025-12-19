@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:accounts": "newman run MyBank_API.postman_collection.json --folder \"Accounts\" --reporters cli,json --reporter-json-export results_accounts.json"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,8 @@
     "sqlite3": "^5.1.7",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "newman": "^6.1.3"
   }
 }

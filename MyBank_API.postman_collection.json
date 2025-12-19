@@ -64,7 +64,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"bankid\": \"BANK001\",\n  \"customerId\": \"CUST001\",\n  \"Name\": \"John Doe Updated\",\n  \"Address\": \"123 Main St\",\n  \"Mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"Dob\": \"1990-01-01\",\n  \"PanCard\": \"ABCDE1234F\",\n  \"AadharCard\": \"123456789012\",\n  \"Gender\": \"Male\",\n  \"Occupation\": \"Engineer\",\n  \"MaritalStatus\": \"Single\"\n}"
+              "raw": "{\n  \"bankid\": \"BANK001\",\n  \"customerId\": \"LEAD001\",\n  \"Name\": \"John Doe Updated\",\n  \"Address\": \"123 Main St\",\n  \"Mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"Dob\": \"1990-01-01\",\n  \"PanCard\": \"ABCDE1234F\",\n  \"AadharCard\": \"123456789012\",\n  \"Gender\": \"Male\",\n  \"Occupation\": \"Engineer\",\n  \"MaritalStatus\": \"Single\"\n}"
             },
             "url": {
               "raw": "{{base_url}}/api/customers/{{customer_id}}",
@@ -418,6 +418,89 @@
           }
         }
       ]
+    },
+    {
+      "name": "Leads",
+      "item": [
+        {
+          "name": "Get All Leads",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/leads",
+              "host": ["{{base_url}}"],
+              "path": ["api", "leads"]
+            }
+          }
+        },
+        {
+          "name": "Get Lead by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/leads/{{lead_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "leads", "{{lead_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Create Lead",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bankid\": \"BANK001\",\n  \"customerId\": \"LEAD001\",\n  \"Name\": \"John Doe\",\n  \"Address\": \"123 Main St\",\n  \"Mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"Dob\": \"1990-01-01\",\n  \"PanCard\": \"ABCDE1234F\",\n  \"AadharCard\": \"123456789012\",\n  \"Gender\": \"Male\",\n  \"Occupation\": \"Engineer\",\n  \"MaritalStatus\": \"Single\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/leads",
+              "host": ["{{base_url}}"],
+              "path": ["api", "leads"]
+            }
+          }
+        },
+        {
+          "name": "Update Lead",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bankid\": \"BANK001\",\n  \"customerId\": \"CUST001\",\n  \"Name\": \"John Doe Updated\",\n  \"Address\": \"123 Main St\",\n  \"Mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"Dob\": \"1990-01-01\",\n  \"PanCard\": \"ABCDE1234F\",\n  \"AadharCard\": \"123456789012\",\n  \"Gender\": \"Male\",\n  \"Occupation\": \"Engineer\",\n  \"MaritalStatus\": \"Single\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/leads/{{lead_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "leads", "{{lead_id}}"]
+            }
+          }
+        },
+        {
+          "name": "Delete Lead",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/leads/{{lead_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "leads", "{{lead_id}}"]
+            }
+          }
+        }
+      ]
     }
   ],
   "variable": [
@@ -444,6 +527,10 @@
     {
       "key": "bank_id",
       "value": "BANK001"
+    },
+    {
+      "key": "lead_id",
+      "value": "1"
     }
   ]
 }

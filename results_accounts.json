@@ -1,0 +1,2391 @@
+{
+  "collection": {
+    "item": [
+      {
+        "id": "8b5845c2-63d8-48cb-b675-1abc045a96f4",
+        "name": "Customers",
+        "item": [
+          {
+            "id": "647f4284-fa69-433b-a67f-50f12e50be12",
+            "name": "Get All Customers",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "customers"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "c827e6f5-73e2-4d74-9f8a-9977d8185491",
+            "name": "Get Customer by ID",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "customers",
+                  "{{customer_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "bcfacef6-4281-4f11-b9c6-b7f407abdadc",
+            "name": "Create Customer",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "customers"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"customerId\": \"CUST001\",\n  \"Name\": \"John Doe\",\n  \"Address\": \"123 Main St\",\n  \"Mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"Dob\": \"1990-01-01\",\n  \"PanCard\": \"ABCDE1234F\",\n  \"AadharCard\": \"123456789012\",\n  \"Gender\": \"Male\",\n  \"Occupation\": \"Engineer\",\n  \"MaritalStatus\": \"Single\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "1046271d-60de-40fb-b90e-129d14ece1ec",
+            "name": "Update Customer",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "customers",
+                  "{{customer_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PUT",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"customerId\": \"LEAD001\",\n  \"Name\": \"John Doe Updated\",\n  \"Address\": \"123 Main St\",\n  \"Mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"Dob\": \"1990-01-01\",\n  \"PanCard\": \"ABCDE1234F\",\n  \"AadharCard\": \"123456789012\",\n  \"Gender\": \"Male\",\n  \"Occupation\": \"Engineer\",\n  \"MaritalStatus\": \"Single\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "e0a079c4-aaad-4eaf-bc0f-d5d4187cf883",
+            "name": "Delete Customer",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "customers",
+                  "{{customer_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "DELETE"
+            },
+            "response": [],
+            "event": []
+          }
+        ],
+        "event": []
+      },
+      {
+        "id": "5e838dd7-8cfb-41dd-b98e-cd255109c623",
+        "name": "Accounts",
+        "item": [
+          {
+            "id": "6d95fdd4-17b5-4710-94c0-708457a7b3ad",
+            "name": "Get All Accounts",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "accounts"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "dc7c765a-8eb3-4701-b718-2599259bf58b",
+            "name": "Get Account by ID",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "accounts",
+                  "{{account_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "33d69f45-57bd-49e8-bb18-392208330d4a",
+            "name": "Create Account",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "accounts"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"AccountID\": \"ACC001\",\n  \"AccountName\": \"Savings Account\",\n  \"ModeOfOperation\": \"Joint\",\n  \"customerId\": \"CUST001\",\n  \"Type\": \"Savings\",\n  \"DateOfOpening\": \"2023-01-01\",\n  \"Status\": \"Active\",\n  \"Balance\": 1000.00,\n  \"StaffId\": \"STAFF001\",\n  \"BranchId\": \"BRANCH001\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "3cd53aab-0458-41b5-b163-3847566f3aad",
+            "name": "Update Account",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "accounts",
+                  "{{account_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PUT",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"AccountID\": \"ACC001\",\n  \"AccountName\": \"Savings Account\",\n  \"ModeOfOperation\": \"Joint\",\n  \"customerId\": \"CUST001\",\n  \"Type\": \"Savings\",\n  \"DateOfOpening\": \"2023-01-01\",\n  \"Status\": \"Active\",\n  \"Balance\": 1500.00,\n  \"StaffId\": \"STAFF001\",\n  \"BranchId\": \"BRANCH001\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "054c3e7b-3fbd-4571-9d94-c66a8d679720",
+            "name": "Delete Account",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "accounts",
+                  "{{account_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "DELETE"
+            },
+            "response": [],
+            "event": []
+          }
+        ],
+        "event": []
+      },
+      {
+        "id": "fe243080-a52b-43ff-891b-cefe70aad31b",
+        "name": "Branches",
+        "item": [
+          {
+            "id": "caf63c47-1af6-405d-a337-8bd32114a321",
+            "name": "Get All Branches",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "branches"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "5af66fa7-0db0-42e6-9b9a-59c07b1dbd06",
+            "name": "Get Branch by ID",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "branches",
+                  "{{branch_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "6cfce890-ae4a-4874-8d7c-1719a1abc20d",
+            "name": "Create Branch",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "branches"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"BranchId\": \"BRANCH001\",\n  \"BranchCode\": \"BR001\",\n  \"Address\": \"456 Branch St\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "9cf7657c-842a-45f6-9ef8-10c7b3bebc31",
+            "name": "Update Branch",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "branches",
+                  "{{branch_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PUT",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"BranchId\": \"BRANCH001\",\n  \"BranchCode\": \"BR001\",\n  \"Address\": \"456 Branch St Updated\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "ca077d05-8793-47f4-b7a5-4a20bbf7da07",
+            "name": "Delete Branch",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "branches",
+                  "{{branch_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "DELETE"
+            },
+            "response": [],
+            "event": []
+          }
+        ],
+        "event": []
+      },
+      {
+        "id": "61269f25-3ea1-4e54-9b96-9d93e22b004f",
+        "name": "Transactions",
+        "item": [
+          {
+            "id": "e4eaf858-a2ec-4bbf-a1c1-c11feeafd3d5",
+            "name": "Get All Transactions",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "transactions"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "9d273290-1fe7-4121-89ad-19b69994cd87",
+            "name": "Get Transaction by ID",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "transactions",
+                  "{{transaction_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "02c0ac18-ccfe-4e5d-9a5d-6922d3751545",
+            "name": "Create Transaction",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "transactions"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"TransactionId\": \"TXN001\",\n  \"AccountId\": \"ACC001\",\n  \"BranchId\": \"BRANCH001\",\n  \"CustomerId\": \"CUST001\",\n  \"Type\": \"Deposit\",\n  \"Amount\": 500.00,\n  \"Currency\": \"USD\",\n  \"Date\": \"2023-01-01\",\n  \"Balance\": 1500.00\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "d85cc93f-db60-4da4-bf05-21bcb0bb7791",
+            "name": "Update Transaction",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "transactions",
+                  "{{transaction_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PUT",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"TransactionId\": \"TXN001\",\n  \"AccountId\": \"ACC001\",\n  \"BranchId\": \"BRANCH001\",\n  \"CustomerId\": \"CUST001\",\n  \"Type\": \"Deposit\",\n  \"Amount\": 600.00,\n  \"Currency\": \"USD\",\n  \"Date\": \"2023-01-01\",\n  \"Balance\": 1600.00\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "1dd0d793-2dd3-44e6-8705-c04d28514c80",
+            "name": "Delete Transaction",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "transactions",
+                  "{{transaction_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "DELETE"
+            },
+            "response": [],
+            "event": []
+          }
+        ],
+        "event": []
+      },
+      {
+        "id": "30810073-6344-4067-9424-0ff4f506cabf",
+        "name": "Banks",
+        "item": [
+          {
+            "id": "2edc8d58-4516-44f7-8def-37027dd2fe6c",
+            "name": "Get All Banks",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "banks"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "06c3123a-6513-440b-a6e1-d036549a1b84",
+            "name": "Get Bank by ID",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "banks",
+                  "{{bank_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "929f5e8b-b424-4b43-86d8-c707089d58f4",
+            "name": "Create Bank",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "banks"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"BankName\": \"My Bank\",\n  \"Address\": \"789 Bank Ave\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "2297c1e9-9da4-492a-8913-7448f9a6e354",
+            "name": "Update Bank",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "banks",
+                  "{{bank_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PUT",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"BankName\": \"My Bank Updated\",\n  \"Address\": \"789 Bank Ave\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "91ed2a81-2a35-43dc-b9cc-7d0889773c13",
+            "name": "Delete Bank",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "banks",
+                  "{{bank_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "DELETE"
+            },
+            "response": [],
+            "event": []
+          }
+        ],
+        "event": []
+      },
+      {
+        "id": "390b2483-b0da-4b21-8e57-71caee9777cb",
+        "name": "Leads",
+        "item": [
+          {
+            "id": "3726f89c-f27b-498e-9b4e-cf6d92c8eaba",
+            "name": "Get All Leads",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "leads"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "2d54023f-e8d0-4caf-99dd-b26a0d7b3f5f",
+            "name": "Get Lead by ID",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "leads",
+                  "{{lead_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "GET"
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "514ae55c-6f0b-4548-8b53-04ccb1f6cdb3",
+            "name": "Create Lead",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "leads"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "POST",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"customerId\": \"LEAD001\",\n  \"Name\": \"John Doe\",\n  \"Address\": \"123 Main St\",\n  \"Mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"Dob\": \"1990-01-01\",\n  \"PanCard\": \"ABCDE1234F\",\n  \"AadharCard\": \"123456789012\",\n  \"Gender\": \"Male\",\n  \"Occupation\": \"Engineer\",\n  \"MaritalStatus\": \"Single\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "1ab7f98a-d025-4ca9-bcd7-f1f3c63220a2",
+            "name": "Update Lead",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "leads",
+                  "{{lead_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "method": "PUT",
+              "body": {
+                "mode": "raw",
+                "raw": "{\n  \"bankid\": \"BANK001\",\n  \"customerId\": \"CUST001\",\n  \"Name\": \"John Doe Updated\",\n  \"Address\": \"123 Main St\",\n  \"Mobile\": \"1234567890\",\n  \"email\": \"john@example.com\",\n  \"Dob\": \"1990-01-01\",\n  \"PanCard\": \"ABCDE1234F\",\n  \"AadharCard\": \"123456789012\",\n  \"Gender\": \"Male\",\n  \"Occupation\": \"Engineer\",\n  \"MaritalStatus\": \"Single\"\n}"
+              }
+            },
+            "response": [],
+            "event": []
+          },
+          {
+            "id": "5a25265d-447d-4a74-b705-720cbc451770",
+            "name": "Delete Lead",
+            "request": {
+              "url": {
+                "path": [
+                  "api",
+                  "leads",
+                  "{{lead_id}}"
+                ],
+                "host": [
+                  "{{base_url}}"
+                ],
+                "query": [],
+                "variable": []
+              },
+              "method": "DELETE"
+            },
+            "response": [],
+            "event": []
+          }
+        ],
+        "event": []
+      }
+    ],
+    "event": [],
+    "variable": [
+      {
+        "type": "any",
+        "value": "http://localhost:6700",
+        "key": "base_url"
+      },
+      {
+        "type": "any",
+        "value": "1",
+        "key": "customer_id"
+      },
+      {
+        "type": "any",
+        "value": "1",
+        "key": "account_id"
+      },
+      {
+        "type": "any",
+        "value": "1",
+        "key": "branch_id"
+      },
+      {
+        "type": "any",
+        "value": "1",
+        "key": "transaction_id"
+      },
+      {
+        "type": "any",
+        "value": "BANK001",
+        "key": "bank_id"
+      },
+      {
+        "type": "any",
+        "value": "1",
+        "key": "lead_id"
+      }
+    ],
+    "info": {
+      "_postman_id": "9398839e-8967-43c9-a663-3c99332fe2fa",
+      "name": "MyBank API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+  },
+  "environment": {
+    "id": "fe483808-0b39-4296-8013-26d8b83989ca",
+    "values": []
+  },
+  "globals": {
+    "id": "5d5bdf4b-9cb6-4d12-9939-f4f560f10278",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 29.8,
+      "responseMin": 2,
+      "responseMax": 88,
+      "responseSd": 30.281347394064216,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1766136775923,
+      "completed": 1766136776115
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 5,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "ed064cdf-f5c4-4dfe-afc8-812c426a83fe",
+          "httpRequestId": "765bc80d-cac8-4ccd-8287-b4952f34bdbd"
+        },
+        "item": {
+          "id": "6d95fdd4-17b5-4710-94c0-708457a7b3ad",
+          "name": "Get All Accounts",
+          "request": {
+            "url": {
+              "path": [
+                "api",
+                "accounts"
+              ],
+              "host": [
+                "{{base_url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "6700",
+            "path": [
+              "api",
+              "accounts"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "7b33699e-0f35-4680-afde-4113c423a23c",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:6700",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "40d87d56-168c-479d-ab4d-8b40a8bdc0ff",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "2"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 19 Dec 2025 09:32:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              91,
+              93
+            ]
+          },
+          "cookie": [],
+          "responseTime": 88,
+          "responseSize": 2
+        },
+        "id": "6d95fdd4-17b5-4710-94c0-708457a7b3ad"
+      },
+      {
+        "cursor": {
+          "ref": "d2970e7c-f477-419d-9ddf-868985d54ce5",
+          "length": 5,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "2655ddf4-8f2f-4f5f-9148-783e644ad57b"
+        },
+        "item": {
+          "id": "dc7c765a-8eb3-4701-b718-2599259bf58b",
+          "name": "Get Account by ID",
+          "request": {
+            "url": {
+              "path": [
+                "api",
+                "accounts",
+                "{{account_id}}"
+              ],
+              "host": [
+                "{{base_url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "6700",
+            "path": [
+              "api",
+              "accounts",
+              "1"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "8967bb49-4e2c-4117-a6a1-08a289be2f3c",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:6700",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "b40c3308-ba1a-4c36-9f5c-80351c2c4fbb",
+          "status": "Not Found",
+          "code": 404,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "31"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1f-JkY0DvpxbEny7Houx5m94RC0biQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 19 Dec 2025 09:32:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              109,
+              101,
+              115,
+              115,
+              97,
+              103,
+              101,
+              34,
+              58,
+              34,
+              65,
+              99,
+              99,
+              111,
+              117,
+              110,
+              116,
+              32,
+              110,
+              111,
+              116,
+              32,
+              102,
+              111,
+              117,
+              110,
+              100,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 28,
+          "responseSize": 31
+        },
+        "id": "dc7c765a-8eb3-4701-b718-2599259bf58b"
+      },
+      {
+        "cursor": {
+          "ref": "a5627087-8818-48cd-85d1-dd96766ff695",
+          "length": 5,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "2078827d-ba17-455e-9078-bd75ad76d065"
+        },
+        "item": {
+          "id": "33d69f45-57bd-49e8-bb18-392208330d4a",
+          "name": "Create Account",
+          "request": {
+            "url": {
+              "path": [
+                "api",
+                "accounts"
+              ],
+              "host": [
+                "{{base_url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bankid\": \"BANK001\",\n  \"AccountID\": \"ACC001\",\n  \"AccountName\": \"Savings Account\",\n  \"ModeOfOperation\": \"Joint\",\n  \"customerId\": \"CUST001\",\n  \"Type\": \"Savings\",\n  \"DateOfOpening\": \"2023-01-01\",\n  \"Status\": \"Active\",\n  \"Balance\": 1000.00,\n  \"StaffId\": \"STAFF001\",\n  \"BranchId\": \"BRANCH001\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "6700",
+            "path": [
+              "api",
+              "accounts"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "5d0c40bf-476e-424a-9d40-8e71b7206627",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:6700",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "293",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"bankid\": \"BANK001\",\n  \"AccountID\": \"ACC001\",\n  \"AccountName\": \"Savings Account\",\n  \"ModeOfOperation\": \"Joint\",\n  \"customerId\": \"CUST001\",\n  \"Type\": \"Savings\",\n  \"DateOfOpening\": \"2023-01-01\",\n  \"Status\": \"Active\",\n  \"Balance\": 1000.00,\n  \"StaffId\": \"STAFF001\",\n  \"BranchId\": \"BRANCH001\"\n}"
+          }
+        },
+        "response": {
+          "id": "e75d94b1-71ae-421b-be58-718e6731ea92",
+          "status": "Created",
+          "code": 201,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "344"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"158-uk9vHaSnOH8ZwGTC0m5OL6UUC8Y\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 19 Dec 2025 09:32:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              105,
+              100,
+              34,
+              58,
+              49,
+              44,
+              34,
+              98,
+              97,
+              110,
+              107,
+              105,
+              100,
+              34,
+              58,
+              34,
+              66,
+              65,
+              78,
+              75,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              65,
+              99,
+              99,
+              111,
+              117,
+              110,
+              116,
+              73,
+              68,
+              34,
+              58,
+              34,
+              65,
+              67,
+              67,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              65,
+              99,
+              99,
+              111,
+              117,
+              110,
+              116,
+              78,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              83,
+              97,
+              118,
+              105,
+              110,
+              103,
+              115,
+              32,
+              65,
+              99,
+              99,
+              111,
+              117,
+              110,
+              116,
+              34,
+              44,
+              34,
+              77,
+              111,
+              100,
+              101,
+              79,
+              102,
+              79,
+              112,
+              101,
+              114,
+              97,
+              116,
+              105,
+              111,
+              110,
+              34,
+              58,
+              34,
+              74,
+              111,
+              105,
+              110,
+              116,
+              34,
+              44,
+              34,
+              99,
+              117,
+              115,
+              116,
+              111,
+              109,
+              101,
+              114,
+              73,
+              100,
+              34,
+              58,
+              34,
+              67,
+              85,
+              83,
+              84,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              84,
+              121,
+              112,
+              101,
+              34,
+              58,
+              34,
+              83,
+              97,
+              118,
+              105,
+              110,
+              103,
+              115,
+              34,
+              44,
+              34,
+              68,
+              97,
+              116,
+              101,
+              79,
+              102,
+              79,
+              112,
+              101,
+              110,
+              105,
+              110,
+              103,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              51,
+              45,
+              48,
+              49,
+              45,
+              48,
+              49,
+              84,
+              48,
+              48,
+              58,
+              48,
+              48,
+              58,
+              48,
+              48,
+              46,
+              48,
+              48,
+              48,
+              90,
+              34,
+              44,
+              34,
+              83,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              65,
+              99,
+              116,
+              105,
+              118,
+              101,
+              34,
+              44,
+              34,
+              66,
+              97,
+              108,
+              97,
+              110,
+              99,
+              101,
+              34,
+              58,
+              49,
+              48,
+              48,
+              48,
+              44,
+              34,
+              83,
+              116,
+              97,
+              102,
+              102,
+              73,
+              100,
+              34,
+              58,
+              34,
+              83,
+              84,
+              65,
+              70,
+              70,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              66,
+              114,
+              97,
+              110,
+              99,
+              104,
+              73,
+              100,
+              34,
+              58,
+              34,
+              66,
+              82,
+              65,
+              78,
+              67,
+              72,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              117,
+              112,
+              100,
+              97,
+              116,
+              101,
+              100,
+              65,
+              116,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              53,
+              45,
+              49,
+              50,
+              45,
+              49,
+              57,
+              84,
+              48,
+              57,
+              58,
+              51,
+              50,
+              58,
+              53,
+              54,
+              46,
+              48,
+              55,
+              49,
+              90,
+              34,
+              44,
+              34,
+              99,
+              114,
+              101,
+              97,
+              116,
+              101,
+              100,
+              65,
+              116,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              53,
+              45,
+              49,
+              50,
+              45,
+              49,
+              57,
+              84,
+              48,
+              57,
+              58,
+              51,
+              50,
+              58,
+              53,
+              54,
+              46,
+              48,
+              55,
+              49,
+              90,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 18,
+          "responseSize": 344
+        },
+        "id": "33d69f45-57bd-49e8-bb18-392208330d4a"
+      },
+      {
+        "cursor": {
+          "ref": "8aba9eaa-4cd6-4c93-900c-6ebd6f15324a",
+          "length": 5,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "f5aaf128-1078-41e7-b160-c5b7b1a64b16"
+        },
+        "item": {
+          "id": "3cd53aab-0458-41b5-b163-3847566f3aad",
+          "name": "Update Account",
+          "request": {
+            "url": {
+              "path": [
+                "api",
+                "accounts",
+                "{{account_id}}"
+              ],
+              "host": [
+                "{{base_url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bankid\": \"BANK001\",\n  \"AccountID\": \"ACC001\",\n  \"AccountName\": \"Savings Account\",\n  \"ModeOfOperation\": \"Joint\",\n  \"customerId\": \"CUST001\",\n  \"Type\": \"Savings\",\n  \"DateOfOpening\": \"2023-01-01\",\n  \"Status\": \"Active\",\n  \"Balance\": 1500.00,\n  \"StaffId\": \"STAFF001\",\n  \"BranchId\": \"BRANCH001\"\n}"
+            }
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "6700",
+            "path": [
+              "api",
+              "accounts",
+              "1"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "fc9e7975-e902-4c75-8a0e-71de3c2b36cb",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:6700",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "293",
+              "system": true
+            }
+          ],
+          "method": "PUT",
+          "body": {
+            "mode": "raw",
+            "raw": "{\n  \"bankid\": \"BANK001\",\n  \"AccountID\": \"ACC001\",\n  \"AccountName\": \"Savings Account\",\n  \"ModeOfOperation\": \"Joint\",\n  \"customerId\": \"CUST001\",\n  \"Type\": \"Savings\",\n  \"DateOfOpening\": \"2023-01-01\",\n  \"Status\": \"Active\",\n  \"Balance\": 1500.00,\n  \"StaffId\": \"STAFF001\",\n  \"BranchId\": \"BRANCH001\"\n}"
+          }
+        },
+        "response": {
+          "id": "13cdc9e0-97bf-4550-9787-ba93b51d8887",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "365"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"16d-KGOXT0tHtrNTAxUb2V3qadDBJjc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 19 Dec 2025 09:32:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              105,
+              100,
+              34,
+              58,
+              49,
+              44,
+              34,
+              98,
+              97,
+              110,
+              107,
+              105,
+              100,
+              34,
+              58,
+              34,
+              66,
+              65,
+              78,
+              75,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              65,
+              99,
+              99,
+              111,
+              117,
+              110,
+              116,
+              73,
+              68,
+              34,
+              58,
+              34,
+              65,
+              67,
+              67,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              65,
+              99,
+              99,
+              111,
+              117,
+              110,
+              116,
+              78,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              83,
+              97,
+              118,
+              105,
+              110,
+              103,
+              115,
+              32,
+              65,
+              99,
+              99,
+              111,
+              117,
+              110,
+              116,
+              34,
+              44,
+              34,
+              77,
+              111,
+              100,
+              101,
+              79,
+              102,
+              79,
+              112,
+              101,
+              114,
+              97,
+              116,
+              105,
+              111,
+              110,
+              34,
+              58,
+              34,
+              74,
+              111,
+              105,
+              110,
+              116,
+              34,
+              44,
+              34,
+              99,
+              117,
+              115,
+              116,
+              111,
+              109,
+              101,
+              114,
+              73,
+              100,
+              34,
+              58,
+              34,
+              67,
+              85,
+              83,
+              84,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              84,
+              121,
+              112,
+              101,
+              34,
+              58,
+              34,
+              83,
+              97,
+              118,
+              105,
+              110,
+              103,
+              115,
+              34,
+              44,
+              34,
+              68,
+              97,
+              116,
+              101,
+              79,
+              102,
+              79,
+              112,
+              101,
+              110,
+              105,
+              110,
+              103,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              51,
+              45,
+              48,
+              49,
+              45,
+              48,
+              49,
+              84,
+              48,
+              48,
+              58,
+              48,
+              48,
+              58,
+              48,
+              48,
+              46,
+              48,
+              48,
+              48,
+              90,
+              34,
+              44,
+              34,
+              83,
+              116,
+              97,
+              116,
+              117,
+              115,
+              34,
+              58,
+              34,
+              65,
+              99,
+              116,
+              105,
+              118,
+              101,
+              34,
+              44,
+              34,
+              66,
+              97,
+              108,
+              97,
+              110,
+              99,
+              101,
+              34,
+              58,
+              49,
+              53,
+              48,
+              48,
+              44,
+              34,
+              68,
+              97,
+              116,
+              101,
+              79,
+              102,
+              67,
+              108,
+              111,
+              115,
+              105,
+              110,
+              103,
+              34,
+              58,
+              110,
+              117,
+              108,
+              108,
+              44,
+              34,
+              83,
+              116,
+              97,
+              102,
+              102,
+              73,
+              100,
+              34,
+              58,
+              34,
+              83,
+              84,
+              65,
+              70,
+              70,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              66,
+              114,
+              97,
+              110,
+              99,
+              104,
+              73,
+              100,
+              34,
+              58,
+              34,
+              66,
+              82,
+              65,
+              78,
+              67,
+              72,
+              48,
+              48,
+              49,
+              34,
+              44,
+              34,
+              99,
+              114,
+              101,
+              97,
+              116,
+              101,
+              100,
+              65,
+              116,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              53,
+              45,
+              49,
+              50,
+              45,
+              49,
+              57,
+              84,
+              48,
+              57,
+              58,
+              51,
+              50,
+              58,
+              53,
+              54,
+              46,
+              48,
+              55,
+              49,
+              90,
+              34,
+              44,
+              34,
+              117,
+              112,
+              100,
+              97,
+              116,
+              101,
+              100,
+              65,
+              116,
+              34,
+              58,
+              34,
+              50,
+              48,
+              50,
+              53,
+              45,
+              49,
+              50,
+              45,
+              49,
+              57,
+              84,
+              48,
+              57,
+              58,
+              51,
+              50,
+              58,
+              53,
+              54,
+              46,
+              48,
+              57,
+              51,
+              90,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 13,
+          "responseSize": 365
+        },
+        "id": "3cd53aab-0458-41b5-b163-3847566f3aad"
+      },
+      {
+        "cursor": {
+          "ref": "4ee667ab-d5ef-4965-a639-d1f56c4f9d49",
+          "length": 5,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "f9988bfa-1def-43cb-8a7d-113cd900c7bf"
+        },
+        "item": {
+          "id": "054c3e7b-3fbd-4571-9d94-c66a8d679720",
+          "name": "Delete Account",
+          "request": {
+            "url": {
+              "path": [
+                "api",
+                "accounts",
+                "{{account_id}}"
+              ],
+              "host": [
+                "{{base_url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "DELETE"
+          },
+          "response": [],
+          "event": []
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "6700",
+            "path": [
+              "api",
+              "accounts",
+              "1"
+            ],
+            "host": [
+              "localhost"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.39.1",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "b67a8b82-b5bc-46ee-904b-6364a31bfa15",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "localhost:6700",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "DELETE"
+        },
+        "response": {
+          "id": "bee8232b-a1b2-4528-8c9b-dac684310f2f",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "29"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1d-GcRCen0YoLBrqzkR3WqZSrBLqbA\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 19 Dec 2025 09:32:56 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              109,
+              101,
+              115,
+              115,
+              97,
+              103,
+              101,
+              34,
+              58,
+              34,
+              65,
+              99,
+              99,
+              111,
+              117,
+              110,
+              116,
+              32,
+              100,
+              101,
+              108,
+              101,
+              116,
+              101,
+              100,
+              34,
+              125
+            ]
+          },
+          "cookie": [],
+          "responseTime": 2,
+          "responseSize": 29
+        },
+        "id": "054c3e7b-3fbd-4571-9d94-c66a8d679720"
+      }
+    ],
+    "transfers": {
+      "responseTotal": 771
+    },
+    "failures": [],
+    "error": null
+  }
+}
