@@ -5,6 +5,14 @@ const sequelize = new Sequelize({
   storage: 'database.sqlite'
 });
 
+// Import all models to ensure they are registered before sync
+require('./models/Account');
+require('./models/Bank');
+require('./models/Branch');
+require('./models/Customer');
+require('./models/Lead');
+require('./models/Transaction');
+
 const connectDB = async () => {
   try {
     await sequelize.authenticate();

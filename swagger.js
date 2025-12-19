@@ -10,7 +10,7 @@ const swaggerDefinition = {
   },
   servers: [
     {
-      url: 'http://localhost:5000',
+      url: 'http://localhost:6700',
       description: 'Development server',
     },
   ],
@@ -77,6 +77,65 @@ const swaggerDefinition = {
           },
         },
       },
+      Lead: {
+        type: 'object',
+        required: ['bankid', 'customerId', 'Name', 'Address', 'Mobile', 'email', 'Dob', 'PanCard', 'AadharCard', 'Gender', 'Occupation', 'MaritalStatus'],
+        properties: {
+          id: {
+            type: 'integer',
+            description: 'Auto-generated ID',
+          },
+          bankid: {
+            type: 'string',
+            description: 'Bank ID',
+          },
+          customerId: {
+            type: 'string',
+            description: 'Customer ID',
+          },
+          Name: {
+            type: 'string',
+            description: 'Lead Name',
+          },
+          Address: {
+            type: 'string',
+            description: 'Lead Address',
+          },
+          Mobile: {
+            type: 'string',
+            description: 'Mobile Number',
+          },
+          email: {
+            type: 'string',
+            description: 'Email Address',
+          },
+          Dob: {
+            type: 'string',
+            format: 'date',
+            description: 'Date of Birth',
+          },
+          PanCard: {
+            type: 'string',
+            description: 'PAN Card Number',
+          },
+          AadharCard: {
+            type: 'string',
+            description: 'Aadhar Card Number',
+          },
+          Gender: {
+            type: 'string',
+            description: 'Gender',
+          },
+          Occupation: {
+            type: 'string',
+            description: 'Occupation',
+          },
+          MaritalStatus: {
+            type: 'string',
+            description: 'Marital Status',
+          },
+        },
+      },
       Error: {
         type: 'object',
         properties: {
@@ -91,7 +150,7 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
-  apis: ['./routes/accountRoutes.js'], // Path to the API docs
+  apis: ['./routes/accountRoutes.js', './routes/leadRoutes.js'], // Path to the API docs
 };
 
 const swaggerSpec = swaggerJSDoc(options);

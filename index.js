@@ -37,6 +37,7 @@ process.on('uncaughtException', (err) => {
     app.use('/api/branches', require('./routes/branchRoutes'));
     app.use('/api/transactions', require('./routes/transactionRoutes'));
     app.use('/api/banks', require('./routes/bankRoutes'));
+    app.use('/api/leads', require('./routes/leadRoutes'));
 
     const PORT = process.env.PORT || 5000;
 
