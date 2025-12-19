@@ -18,8 +18,6 @@ process.on('uncaughtException', (err) => {
 
 (async () => {
   try {
-    await connectDB();
-
     const app = express();
 
     app.use(cors());
@@ -38,6 +36,8 @@ process.on('uncaughtException', (err) => {
     app.use('/api/transactions', require('./routes/transactionRoutes'));
     app.use('/api/banks', require('./routes/bankRoutes'));
     app.use('/api/leads', require('./routes/leadRoutes'));
+
+    await connectDB();
 
     const PORT = process.env.PORT || 5000;
 
